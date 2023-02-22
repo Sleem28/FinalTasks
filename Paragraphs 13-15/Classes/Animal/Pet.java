@@ -7,7 +7,6 @@ import java.util.Date;
 import java.util.List;
 
 public class Pet extends BaseAnimal implements IEnjoy, IGetSkills, IPlay, ITrain, ISleep {
-    String name;
     int skill_counter;
     List<String> skills;
 
@@ -25,28 +24,40 @@ public class Pet extends BaseAnimal implements IEnjoy, IGetSkills, IPlay, ITrain
      */
     public Pet(String name, int legs, String birthday, double height, double weight) {
         super(legs, birthday, height, weight);
-        this.name = name;
+        super.name = name;
         this.skills = new ArrayList<>();
         this.skill_counter = 0;
+        super.status = "пока нет статуса";
     }
     /**
      * Устанавливает домашнему животному статус 'радуется'
      */
     @Override
     public void enjoy() {
-        super.status = "enjoy";
+        super.status = "радуется";
     }
 
+    /**
+     * Выводит на экран скиллы домашнего животного
+     */
     @Override
     public void getSkills() {
+        int counter = 1;
+        StringBuilder sb = new StringBuilder();
 
+        for (String item:
+             skills) {
+            sb.append(counter).append(": ").append(item).append("\n");
+            counter++;
+        }
+        System.out.println(sb.toString());
     }
     /**
      * Устанавливает домашнему животному статус 'играет'
      */
     @Override
     public void play() {
-        super.status = "play";
+        super.status = "играет";
     }
 
     /**
@@ -67,7 +78,7 @@ public class Pet extends BaseAnimal implements IEnjoy, IGetSkills, IPlay, ITrain
      */
     @Override
     public void sleep() {
-        super.status = "sleep";
+        super.status = "спит";
     }
 
 }

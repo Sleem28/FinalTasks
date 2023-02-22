@@ -3,7 +3,6 @@ package Classes.Animal;
 import Interfaces.Animal.IRest;
 import Interfaces.Animal.IWork;
 
-import java.util.Date;
 
 public class PackAnimal extends BaseAnimal implements IWork, IRest {
 
@@ -16,16 +15,17 @@ public class PackAnimal extends BaseAnimal implements IWork, IRest {
      */
     public PackAnimal(int legs, String birthday, double height, double weight) {
         super(legs, birthday, height, weight);
+        super.status = "пока нет статуса";
     }
 
     @Override
     public void rest() {
-        super.status = "rest";
+        super.status = "отдыхает";
     }
 
     @Override
     public void work() {
-        super.status = "work";
+        super.status = "работает";
     }
 
 }

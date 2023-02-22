@@ -6,7 +6,13 @@ import java.util.Date;
 
 
 public class BaseAnimal implements ICry {
-    static int animalCounter = 0;
+
+    protected String name;
+
+    public String getName() {
+        return name;
+    }
+
     protected int legs;
     protected String birthday;
     protected double height;

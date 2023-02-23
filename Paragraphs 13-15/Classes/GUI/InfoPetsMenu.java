@@ -6,13 +6,19 @@ public class InfoPetsMenu extends BaseGUI{
     WorkWithPetMenu catInfoMenu;
     WorkWithPetMenu dogInfoMenu;
     WorkWithPetMenu humsterInfoMenu;
+    /**
+     * Класс меню для получения информации о домашних животных
+     * @param loader загрузчик доп классов
+     */
     public InfoPetsMenu(BaseLoader loader) {
         super(loader);
         catInfoMenu = new WorkWithPetMenu(loader,"Cat");
         dogInfoMenu = new WorkWithPetMenu(loader,"Dog");
         humsterInfoMenu = new WorkWithPetMenu(loader,"Humster");
     }
-
+    /**
+     * Метод показывает рабочее меню
+     */
     @Override
     public void showMenu() {
         int choice = -1;

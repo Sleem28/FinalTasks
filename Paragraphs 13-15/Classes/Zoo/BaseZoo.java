@@ -13,6 +13,9 @@ public abstract class BaseZoo {
     protected List<BaseAnimal> donkeys;
     protected List<BaseAnimal> horses;
 
+    /**
+     * Абстракный класс-хранилище для создаваемых животных
+     */
     public BaseZoo() {
         this.cats = new ArrayList<>();
         this.dogs = new ArrayList<>();

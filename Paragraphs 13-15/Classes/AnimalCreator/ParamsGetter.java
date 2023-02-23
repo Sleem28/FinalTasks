@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class ParamsGetter {
     Scanner scanner;
 
+    /**
+     * Класс для получнеия параметров животных из консоли
+     * @param scanner экземпляр класса Scanner
+     */
     public ParamsGetter(Scanner scanner) {
         this.scanner = scanner;
     }

@@ -6,13 +6,19 @@ public class MainMenu extends BaseGUI{
     AddPackAnimalMenu packAnimalMenu;
     AddPetMenu petMenu;
     InfoAnimalsMenu animalsMenu;
+    /**
+     * Класс главное меню
+     * @param loader загрузчик доп классов
+     */
     public MainMenu(BaseLoader loader) {
         super(loader);
         this.packAnimalMenu = new AddPackAnimalMenu(super.loader);
         this.petMenu = new AddPetMenu(super.loader);
         this.animalsMenu = new InfoAnimalsMenu(loader);
     }
-
+    /**
+     * Метод показывает рабочее меню
+     */
     @Override
     public void showMenu() {
         int choice = -1;

@@ -9,6 +9,9 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Loader extends BaseLoader{
+    /**
+     * Класс загрузчик экземпляров классов нужных для работы
+     */
     public Loader() {
         super.scanner = new Scanner(new InputStreamReader(System.in));
         super.zoo = new Zoo();

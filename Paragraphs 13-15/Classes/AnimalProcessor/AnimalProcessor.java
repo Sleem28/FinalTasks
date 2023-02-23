@@ -8,8 +8,12 @@ import java.util.List;
 
 public class AnimalProcessor implements IAddAnimal, IGetPet, IGetPackAnimal, IGetNames, IGetBirthdays {
     BaseZoo zoo;
-    CollectionFinder finder;
+    CollectionFinder finder; // Класс ищет в коллекциях с животными нужных животных
 
+    /**
+     * Класс для работы с животными
+     * @param zoo класс с коллекциями животных
+     */
     public AnimalProcessor(BaseZoo zoo) {
         this.zoo = zoo;
         finder = new CollectionFinder();

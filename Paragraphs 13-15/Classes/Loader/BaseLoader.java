@@ -8,12 +8,16 @@ import Classes.Zoo.BaseZoo;
 
 import java.util.Scanner;
 
+/**
+ * Абстрактный класс для загрузчика классов
+ */
 public abstract class BaseLoader {
     Scanner scanner;
     BaseZoo zoo;
     AnimalProcessor animalProcessor;
     AnimalCreator animalCreator;
     ParamsGetter paramsGetter;
+
 
     public AnimalCreator getAnimalCreator() {
         return animalCreator;

@@ -6,14 +6,19 @@ public class InfoPackAnimalsMenu extends BaseGUI{
     WorkWithPackAnimalMenu donkeyInfoMenu;
     WorkWithPackAnimalMenu camelInfoMenu;
     WorkWithPackAnimalMenu horseInfoMenu;
-
+    /**
+     * Класс меню для получения информации о вьючных животных
+     * @param loader загрузчик доп классов
+     */
     public InfoPackAnimalsMenu(BaseLoader loader) {
         super(loader);
         this.donkeyInfoMenu = new WorkWithPackAnimalMenu(loader, "Donkey");
         this.camelInfoMenu = new WorkWithPackAnimalMenu(loader, "Camel");
         this.horseInfoMenu = new WorkWithPackAnimalMenu(loader, "Horse");
     }
-
+    /**
+     * Метод показывает рабочее меню
+     */
     @Override
     public void showMenu() {
         int choice = -1;

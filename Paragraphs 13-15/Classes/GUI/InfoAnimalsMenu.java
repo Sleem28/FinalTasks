@@ -5,12 +5,18 @@ import Classes.Loader.BaseLoader;
 public class InfoAnimalsMenu extends BaseGUI{
     InfoPackAnimalsMenu packAnimalsMenu;
     InfoPetsMenu petMenu;
+    /**
+     * Класс меню для информации о животных
+     * @param loader загрузчик доп классов
+     */
     public InfoAnimalsMenu(BaseLoader loader) {
         super(loader);
         this.packAnimalsMenu = new InfoPackAnimalsMenu(loader);
         this.petMenu = new InfoPetsMenu(loader);
     }
-
+    /**
+     * Метод показывает рабочее меню
+     */
     @Override
     public void showMenu() {
         int choice = -1;

@@ -1,10 +1,8 @@
 package Classes.Animal;
 
-import Interfaces.Animal.ICry;
-
-import java.util.Date;
-
-
+/**
+ * Базовый класс для животных
+ */
 public class BaseAnimal implements ICry {
 
     protected String name;

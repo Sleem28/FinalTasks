@@ -7,7 +7,11 @@ import Classes.Loader.BaseLoader;
 public class WorkWithPetMenu extends BaseGUI{
     AnimalProcessor processor;
     String type;
-
+    /**
+     * Класс меню для работы с домашними животными
+     * @param loader загрузчик доп классов
+     * @param type тип домашнего животного
+     */
     public WorkWithPetMenu(BaseLoader loader, String type) {
         super(loader);
         this.processor = loader.getAnimalProcessor();

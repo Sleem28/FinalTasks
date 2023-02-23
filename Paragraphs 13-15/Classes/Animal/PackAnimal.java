@@ -1,8 +1,5 @@
 package Classes.Animal;
 
-import Interfaces.Animal.IRest;
-import Interfaces.Animal.IWork;
-
 
 public class PackAnimal extends BaseAnimal implements IWork, IRest {
 
@@ -18,11 +15,16 @@ public class PackAnimal extends BaseAnimal implements IWork, IRest {
         super.status = "пока нет статуса";
     }
 
+    /**
+     * Устанавливает статус "отдыхает" для вьючного животного
+     */
     @Override
     public void rest() {
         super.status = "отдыхает";
     }
-
+    /**
+     * Устанавливает статус "работает" для вьючного животного
+     */
     @Override
     public void work() {
         super.status = "работает";

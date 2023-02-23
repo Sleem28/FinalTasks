@@ -10,12 +10,19 @@ import Classes.Loader.BaseLoader;
 public class WorkWithPackAnimalMenu extends BaseGUI{
     AnimalProcessor processor;
     String type;
+    /**
+     * Класс меню для работы с вьючными животными
+     * @param loader загрузчик доп классов
+     * @param type тип вьючного животного
+     */
     public WorkWithPackAnimalMenu(BaseLoader loader, String type) {
         super(loader);
         this.processor = loader.getAnimalProcessor();
         this.type = type;
     }
-
+    /**
+     * Метод показывает рабочее меню
+     */
     @Override
     public void showMenu() {
         String choice = "";

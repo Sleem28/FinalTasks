@@ -1,9 +1,6 @@
 package Classes.Animal;
 
-import Interfaces.Animal.*;
-
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Pet extends BaseAnimal implements IEnjoy, IGetSkills, IPlay, ITrain, ISleep {

@@ -1,6 +1,7 @@
 package Classes.AnimalCreator;
 
 import Classes.Animal.*;
+import jdk.jfr.StackTrace;
 
 
 public class AnimalCreator implements CreateAnimals{
@@ -11,6 +12,10 @@ public class AnimalCreator implements CreateAnimals{
     double height;
     double weight;
 
+    /**
+     * Класс создает животных
+     * @param paramsGetter класс беружий параметры из консоли
+     */
     public AnimalCreator(ParamsGetter paramsGetter) {
         this.paramsGetter = paramsGetter;
     }
@@ -115,6 +120,7 @@ public class AnimalCreator implements CreateAnimals{
                 throw new RuntimeException("Неверные параметры для создания Верблюда");
             }
             tmp = new Camel(this.legs,this.birthday,this.height,this.weight);
+
             AnimalCounter.add();
             System.out.println("Верблюд создан.\n");
         }catch (Exception e){
